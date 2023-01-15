@@ -16,3 +16,12 @@ def start_bot(update, ctx):
 
 def help_bot(update, ctx):
     update.message.reply_text('If you need help! Please contact Sandun..!')
+
+
+def chat(update, ctx):
+    text = str(update.message.text).lower()
+    response = res.bot_responses(text)
+
+    update.message.reply_text(response)
+
+
