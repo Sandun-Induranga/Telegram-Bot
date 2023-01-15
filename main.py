@@ -10,5 +10,9 @@ import responses as res
 print("Bot Started..!")
 
 
-def start_command(update, ctx):
+def start_bot(update, ctx):
     update.message.reply_text('Type Something to get started..!')
+
+
+def help_bot(update, ctx):
+    update.message.reply_text('If you need help! Please contact Sandun..!')
