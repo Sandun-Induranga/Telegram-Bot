@@ -27,3 +27,5 @@ def bot_responses(message):
 
     if user_message in ('java 18 doc', 'java 18 documentation'):
         return "https://docs.oracle.com/javase/8/docs/api/index.html"
+
+    return "Command Not Found"
