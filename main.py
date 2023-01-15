@@ -25,3 +25,5 @@ def chat(update, ctx):
     update.message.reply_text(response)
 
 
+def error(update, ctx):
+    print(ctx.error)
