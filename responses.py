@@ -12,3 +12,6 @@ def bot_responses(message):
 
     if user_message in ('who are you', 'who are you?', 'what is this'):
         return 'I\'m a bot who created by Sandun Induranga'
+
+    if user_message in ('who made you', 'who made you?', 'Who created you', 'Who created you?'):
+        return 'Sandun Induranga Created me.'
