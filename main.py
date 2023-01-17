@@ -27,3 +27,26 @@ def chat(update, ctx):
 
 def error(update, ctx):
     print(ctx.error)
+    
+    
+def main():
+    updater = Updater(key.API_KEY, use_context=True)
+    dp = updater.dispatcher
+    # app = ApplicationBuilder().token(key.API_KEY).build()
+    dp.add_handler(CommandHandler("start", start_bot))
+    dp.add_handler(CommandHandler("help", help_bot))
+
+    dp.add_handler(MessageHandler(Filters.text, chat))
+    #
+    # dp.add_error_handler(error)
+    #
+    # updater.start_polling()
+    # updater.idle()
+
+    dp.add_handler(CommandHandler("hello", start_bot))
+
+    dp.run_polling()
+    dp.idle()
+
+
+main()
